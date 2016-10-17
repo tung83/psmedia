@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Services\PannelAdmin;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
@@ -23,14 +24,11 @@ class AdminController extends Controller
     */
     public function __invoke()
     {
-         return 'Hello World';
-        $pannels = [];
-        $configPannels = config('admin.pannels');
+         //return 'Hello World2';
+        
+        //dd($pannel);
 
-        foreach ($configPannels as $pannel) {
-            array_push($pannels, new PannelAdmin($pannel));
-        }
-
-        return view('back.index', compact('pannels'));
+        return view('back.index');
+        
     }
 }

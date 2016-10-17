@@ -38,7 +38,7 @@ Route::get('/ajax/homeNews','NewsAjaxController@partialHomeData');
 
 
 // Admin
-Route::get('admin', 'AdminController')->name('admin');
+//Route::get('admin', 'AdminController')->name('admin');
 
 // Medias
 Route::get('medias', 'FilemanagerController')->name('medias');
@@ -84,3 +84,14 @@ Route::get('confirm/{token}', 'Auth\RegisterController@confirm');
 // Notifications
 Route::get('notifications/{user}', 'NotificationController@index');
 Route::put('notifications/{notification}', 'NotificationController@update');
+
+// admin session
+//['middleware' => 'admin']
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin@@'], function() {
+
+    Route::get('/', 'AdminController')->name('Admin');  
+    //Route::get('login', 'Auth\AdminLoginController@showLoginForm')->name('adminLogin');  
+    //Route::get('/', 'AdminController'->name('admin'))
+    // the rest of your dashboard routes.
+
+});

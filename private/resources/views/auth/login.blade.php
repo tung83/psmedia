@@ -1,4 +1,4 @@
-@extends('front.template')
+@extends('auth.template')
 
 @section('main')
     <div class="row">
