@@ -1,0 +1,14 @@
+{
+    "name": "soerenkroell/composer-slick",
+    "description": "A composer package for the last carousel you'll ever need",
+    "homepage": "https://github.com/kenwheeler/slick",
+    "authors": [
+        {
+            "name": "Ken Wheeler",
+            "email": "ken_wheeler@me.com"
+        }
+    ],
+    "license": "MIT",
+    "type": "component",
+    "version": "1.5.5"
+}
